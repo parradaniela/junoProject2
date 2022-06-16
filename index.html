@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Juno WebDev Project 2</title>
+    <!-- Open Sans font -->
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <!-- stylesheet -->
+    <link rel="stylesheet" href="./styles/styles.css">
+</head>
+<body>
+    <div class="wrapper">
+
+        <!-- Nav -->
+        <nav aria-level="Primary" class="top-nav flex-row">
+            <a href="#" class="logo">Spaces</a>
+            <label for="toggle">Menu</label>
+            <input type="checkbox" id="toggle" name="toggle">
+            <ul class="flex-row slide-out">
+                <li><a href="#about">About</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+
+        <!-- Header -->
+        <header class="section-padding">
+            <h1>Spaces is an architecture studio based in Toronto, Canada</h1>
+            <div class="rel-container">
+                <img class="badge" src="./assets/badge.png" alt="A badge of a simple house design in gold surrounded by the words 'Best Studio of the Year' in a circle.">
+                <img  class="header-img" src="./assets/header.jpg" alt="A bright interior shot of a sitting room leading to an open deck with a dining table set and trees in the background.">
+                <div class="overlay"></div>
+            </div>
+        </header>
+    </div>
+    
+    <main>
+        <div class="wrapper">
+
+            <!-- About / Our Practice Section -->
+            <section class="about flex-row section-padding" id="about">
+                <div class="our-practice flex-column">
+                    <h2>Our Practice</h2>
+                    <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms. Energy healing pendulum meditate divination practitioner candles chanting massage Buddha. Divine Light Worker herbalist, lavender love compassion practitioner pendulum massage fibonacci sage. Dance peace angels awakening. Love Flower of Life tarot shamantic. Quartz spirit guides divination peace, herbalist chakra clearing full moon shaman</p>
+                    <a href="#contact"><button type="button">Send Message</button></a>
+                </div>
+                <div class="rel-container">
+                    <img class="about-img1" src="./assets/image1.jpg" alt="A modern white kitchen with light wood accents, with an island and three stools as the focus.">
+                    <img class="about-img2" src="./assets/image2.jpg" alt="A different angle shot of the same kitchen in the previous image, black hanging lights and a sink fixture now more visible.">
+                </div>
+            </section>
+            
+            <!-- Project Spotlight / Gallery Section -->
+            <section class="projects section-padding" id="projects">
+                <h2>Spotlight</h2>
+                <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms.</p>
+                <ul class="flex-row">
+                    <li class="rel-container half-width">
+                        <img src="./assets/image3.jpg" alt="A modern all-white marble kitchen with black accents.">
+                        <h3>Elouise Avenue</h3>
+                    </li>
+                    <li class="rel-container half-width">
+                        <img src="./assets/image4.jpg" alt="An outdoor view of a modern house with light wood, black and white walls as well as ceiling length glass windows.">
+                        <h3>Grant Residence</h3>
+                    </li>
+                    <li class="rel-container third-width">
+                        <img src="./assets/image5.jpg" alt="View of a sunny indoor collaborative space, with two picnic-style light wood tables and benches, black overhead hanging lights and ceiling-length windows on the left side.">
+                        <h3>Basil Lab</h3>
+                    </li>
+                    <li class="rel-container third-width">
+                        <img src="./assets/image6.jpg" alt="Photo of a small room in warm yellow lighting with a circular dark wood table and three black metal chairs, and a wooden staircase leading upstairs in the background.">
+                        <h3>Jo Residence</h3>
+                    </li>
+                    <li class="rel-container third-width">
+                        <img src="./assets/image7.jpg" alt="An indoor shot of a modern tea shop's sitting area designed with a wooden slat ceiling, white marble walls, a white stone floor, tables and chairs with wooden tops and metal legs, and a variety of dark green plants throughout the space.">
+                        <h3>Rentea</h3> 
+                    </li>
+                </ul>
+            </section>
+        </div>
+
+        <!-- Contact Form Section -->
+        <section class="contact section-padding" id="contact">
+            <div class="wrapper">
+                <div class="size-container">
+                    <h2>Tell us about your ideas</h2>
+                    <p>Manifestation spirit guides quartz, Reiki practitioner stones oracle peace healer goddess sage charms.</p>
+        
+                    <form action="#" method="POST" name="contact-form" class="flex-column">
+                        <div class="inputs-grouped flex-row">
+                            <div class="flex-column name-field">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" required placeholder="Ex: Jane Smith">  
+                            </div>
+                            <div class="flex-column email-field">
+                                <label for="email">Email</label>
+                                <input type="email" id="email" required placeholder="Ex: myname@myemail.com">
+                            </div> 
+                        </div>
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="10" maxlength="500"></textarea>
+                        <button type="submit">Send Message</button>
+                    </form>
+                    
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="wrapper section-padding">
+            <h2>Words from our clients</h2>
+            <article class="size-container">
+                <p>Spaces were an incredible team of passionate creatives, who truly transformed our space into a beautiful sanctuary.</p>
+                <div class="testimonial-details flex-row">
+                    <div class="flex-row">
+                        <img src="./assets/image10.jpg" alt="A headshot of the client whose testimony is highlighted.">
+                        <div>
+                            <p class="bolded">Jaime Jorge</p>
+                            <p class="small">Founder, RENTEA </p>                      
+                        </div>
+                    </div>
+                    <div>
+                        <a href="#"><i class="arrow-body"></i><i class="arrow-head"></i></a>
+                    </div>                
+                </div>
+            </article>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="wrapper section-padding">
+        <img src="./assets/image9.jpg" alt="Photo of an office lounge room, designed with light wooden walls and fixtures, a white accent wall, a light blue couch and a number of white and green chairs arranged around coffee tables.">
+        <div class="flex-row"> 
+            <section>
+                <a href="#" class="logo">Spaces</a>
+                <p>129 Jordan Ave,</p>
+                <p>Toronto, CA M22 324</p>
+                <p>(232) - 222 - 2522</p>
+                <p>info@spaces-studio.com</p>
+            </section>
+            <nav aria-label="Secondary" class="flex-row">
+                <ul class="flex-column">
+                    <li><h4>Menu</h4></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Who we are</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+                <ul class="flex-column">
+                    <li><h4>Projects</h4></li>
+                    <li><a href="#">Residential</a></li>
+                    <li><a href="#">Commercial</a></li>
+                    <li><a href="#">Conceptual</a></li>
+                </ul>
+                <ul class="flex-column">
+                    <li><h4>Follow</h4></li>
+                    <li><a href="#">Instagram</a></li>
+                    <li><a href="#">Youtube</a></li>
+                    <li><a href="#">Houzz</a></li>
+                </ul>
+            </nav>
+        </div>
+        <aside><a href="https://junocollege.com/">Created at Juno College of Technology</a></aside>
+    </footer>
+    
+</body>
+</html>

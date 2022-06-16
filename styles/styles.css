@@ -1,0 +1,711 @@
+html{line-height:1.15;-ms-text-size-adjust:100%;-webkit-text-size-adjust:100%}body{margin:0}article,aside,footer,header,nav,section{display:block}h1{font-size:2em;margin:.67em 0}figcaption,figure,main{display:block}figure{margin:1em 40px}hr{box-sizing:content-box;height:0;overflow:visible}pre{font-family:monospace,monospace;font-size:1em}a{background-color:transparent;-webkit-text-decoration-skip:objects}abbr[title]{border-bottom:none;text-decoration:underline;text-decoration:underline dotted}b,strong{font-weight:inherit}b,strong{font-weight:bolder}code,kbd,samp{font-family:monospace,monospace;font-size:1em}dfn{font-style:italic}mark{background-color:#ff0;color:#000}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}audio,video{display:inline-block}audio:not([controls]){display:none;height:0}img{border-style:none}svg:not(:root){overflow:hidden}button,input,optgroup,select,textarea{font-family:sans-serif;font-size:100%;line-height:1.15;margin:0}button,input{overflow:visible}button,select{text-transform:none}button,html [type=button],[type=reset],[type=submit]{-webkit-appearance:button}button::-moz-focus-inner,[type=button]::-moz-focus-inner,[type=reset]::-moz-focus-inner,[type=submit]::-moz-focus-inner{border-style:none;padding:0}button:-moz-focusring,[type=button]:-moz-focusring,[type=reset]:-moz-focusring,[type=submit]:-moz-focusring{outline:1px dotted ButtonText}fieldset{padding:.35em .75em .625em}legend{box-sizing:border-box;color:inherit;display:table;max-width:100%;padding:0;white-space:normal}progress{display:inline-block;vertical-align:baseline}textarea{overflow:auto}[type=checkbox],[type=radio]{box-sizing:border-box;padding:0}[type=number]::-webkit-inner-spin-button,[type=number]::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}[type=search]::-webkit-search-cancel-button,[type=search]::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}details,menu{display:block}summary{display:list-item}canvas{display:inline-block}template{display:none}[hidden]{display:none}
+
+html { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+
+*, *:before, *:after {box-sizing: inherit}
+
+.sr-only { position: absolute; width: 1px; height: 1px; margin: -1px; border: 0; padding: 0; white-space: nowrap; clip-path: inset(100%); clip: rect(0 0 0 0); overflow: hidden;}
+
+html {
+    font-size: 125%;
+}
+
+.wrapper {
+    max-width: 1400px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+/* stripping styles */
+
+body, 
+h1,
+h2,
+h3,
+h4,
+ul, 
+li,
+p {
+    margin: 0; 
+    padding: 0; 
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* font styles */
+
+h1, 
+h2, 
+h3, 
+h4,
+button, 
+.bolded {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 600;
+}
+
+nav, 
+p, 
+a, 
+label {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+}
+
+/* general styles */
+
+body {
+    background-color: #F4F3F0;
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.flex-column {
+    display: flex; 
+    flex-direction: column;
+}
+
+.rel-container {
+    position: relative;
+}
+
+.section-padding {
+    padding: 40px 0;
+}
+
+.size-container{
+    width: 70%;
+}
+
+.desktop-hidden {
+    display: none;
+}
+
+.logo {
+    font-size: 1.4rem;
+    text-transform: uppercase;
+}
+
+h1 {
+    font-size: 2.1rem;
+    text-align: center;
+    padding: 5% 20%;
+    line-height: 1.5;
+}
+
+h2 {
+    font-size: 1.6rem;
+    position: relative;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+
+h2::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 1px;
+    width: 60px;
+    border-bottom: 3px solid #B18F39;
+}
+
+h3 {
+    position: absolute;
+    right: 0; 
+    bottom: 10px;
+    background: white;
+    padding: 10px 20px;
+    text-transform: uppercase;
+}
+
+h3, 
+button,
+.small {
+    font-size: 0.8rem;
+}
+
+
+h4 {
+    padding-bottom: 20px;
+    margin: 0;
+/* h4 is the size of 1rem so I don't think that needs to be declared? */
+}
+
+
+img {
+    object-fit: cover;
+    width: 100%;
+}
+
+nav, 
+p, 
+label {
+    font-size: 0.9rem;
+}
+
+article {
+    border-left: solid 7px #B18F39;
+    padding: 30px;
+    margin-top: 40px;
+}
+
+aside {
+    width: 100%;
+    border-top: 1px solid #9C9B98;
+    padding: 20px 0;
+    margin-top: 40px;
+}
+
+p {
+    line-height: 2;
+}
+
+a {
+    color: black;
+    display: block;
+    transition: 0.3s;
+}
+
+a:hover, 
+a:focus {
+    color: #9C9B98;
+}
+
+form {
+    padding: 30px 0;
+}
+
+label {
+    padding: 10px 0;
+    transition: 0.7s;
+} 
+
+label[for="toggle"] {
+    display: none;
+    text-transform: uppercase;
+    position: fixed;
+    right: 0;
+    z-index: 20;
+    font-size: 1rem;
+    background: #F4F3F0;
+    color: #9C9B98;
+    padding: 30px 15px;
+    box-shadow: 
+        rgba(67, 71, 85, 0.27) 0px 0px 0.25em, 
+        rgba(90, 125, 188, 0.05) 0px 0.25em 1em;
+    border-radius: 50%;
+}
+
+label[for="toggle"]::before {
+    content: "";
+    position: absolute;
+    left: 13px;
+    bottom: 25px;
+    height: 1px;
+    width: 70%;
+    color: white;
+    border-bottom: 2px solid #9C9B98;
+}
+
+
+label[for="toggle"]::after {
+    content: "";
+    position: absolute;
+    right: 13px;
+    top: 25px;
+    height: 1px;
+    width: 70%;
+    border-top: 2px solid #9C9B98;
+} 
+
+input {
+    border: 2px solid #B18F39;
+    padding: 10px;
+}
+
+input[type="checkbox"] {
+    display: none;
+}
+
+textarea {
+    width: 100%;
+    resize: none;
+    border: 2px solid #B18F39;
+    padding: 10px;
+    margin-bottom: 30px;
+}
+
+button {
+    padding: 20px;
+}
+
+button,
+.our-practice a  {
+    background: #B18F39;
+    color: #F4F3F0;
+    text-transform: uppercase;
+    width: 250px;
+    border: solid 1px #B18F39;
+    transition: 0.3s;
+}
+
+button:hover,
+button:focus,
+.our-practice a:hover,
+.our-practice a:focus {
+    background: #F4F3F0;
+    color: #B18F39; 
+    border: solid 1px #B18F39;
+}
+
+button:active,
+.our-practice a:active {
+    color: #333333;
+    border: solid 1px #333333;
+}
+
+/* top nav and header styles */
+
+.top-nav {
+    justify-content: space-between;
+    align-items: center;
+}
+
+.top-nav a {
+    padding: 20px;
+    text-transform: uppercase;
+}
+
+.top-nav .logo {
+    padding-left: 0;
+}
+
+.badge {
+    position: absolute;
+    width: 125px;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.header-img {
+    height: 60vh;
+    display: block;
+}
+
+.overlay {
+    position: absolute; 
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* About Our Practice styles */
+
+.about {
+    min-height: 80vh;
+}
+
+.our-practice {
+    margin-right: 50px;
+    width: calc(50% - 50px);
+}
+
+.our-practice p {
+    margin: 30px 0; 
+}
+
+.about .rel-container {
+    width: calc(50% - 20px);
+    min-height: 80vh;
+    padding: 10px;
+}
+.about-img1,
+.about-img2 {
+    height: 80%;
+    width: 60%;
+    position: absolute;
+}
+
+.about-img1 {
+    bottom: 0;
+    left: 0;
+    z-index: 10;
+}
+
+.about-img2 {
+    top: 0;
+    right: 0;
+}
+
+/* Gallery styles */
+
+.half-width {
+    width: calc(50% - 2%);
+    height: 450px;
+    margin: 1%;
+}
+
+.third-width {
+    width: calc((100% / 3) - 2%);
+    height: 450px;
+    margin: 1%;
+}
+
+.projects ul li img {
+    height: 100%;
+}
+
+/* Contact styles */
+
+.contact {
+    background: url(../assets/image8.jpg);
+    background-position: center;
+    background-size: cover;
+}
+
+.inputs-grouped {
+    justify-content: space-between;
+}
+
+.name-field {
+    width: calc(40% - 20px);
+    margin-right: 20px;
+}
+
+.email-field {
+    width: 60%;
+}
+
+/* Testimonials styles */
+
+article .flex-row {
+    align-items: center;
+}
+
+article .testimonial-details {
+    margin-top: 40px;
+    justify-content: space-between;
+}
+
+article img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin-right: 30px;
+}
+
+article p {
+    font-size: 1.6rem;
+}
+
+.arrow-body {
+    display: inline-block;
+    position: relative;
+    bottom: 5px;
+    left: 11px;
+    width: 100px;
+    border-bottom: 3px solid #B18F39;
+}
+
+.arrow-head {
+    border: solid #B18F39;
+    border-width: 0 3px 3px 0;
+    padding: 5px;
+    display: inline-block;
+    transform: rotate(-45deg);
+    
+}           
+
+/* Footer styles */
+
+footer img {
+    height: 50vh;
+    min-height: 300px;
+    margin-bottom: 80px;
+}
+
+footer .flex-row {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+footer .logo {
+    padding-bottom: 20px;
+}
+
+footer li {
+    margin: 10px 20px;
+}
+
+footer ul a {
+    text-decoration: underline;
+}
+
+aside a {
+    color: #9C9B98;
+    font-size: 0.7rem;
+}
+
+aside a:hover, 
+aside a:focus {
+    color: black;
+}
+
+/* media queries */
+
+@media (max-width: 1260px) {
+    h1 {
+        padding: 5% 5%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 1080px) {
+   
+    h3 {
+        font-size: 1.2rem;
+    }
+
+    .size-container {
+        width: 100%;
+    }
+
+    /* About/Our practice edits */
+
+    .our-practice {
+        width: 100%;
+        margin: 0;
+    }
+
+    .about .rel-container {
+        width: 100%;
+        min-height: 70vh;
+        margin-top: 40px;
+        padding: 0px 20px;
+        display: flex;
+    }
+
+    .about-img1,
+    .about-img2 {
+        width: 55%;
+        height: 85%;
+    }
+
+    /* Gallery/Projects edits */
+
+    .third-width {
+        width: calc(50% - 2%);
+    }
+
+    .half-width + .third-width {
+        width: calc(100% - 2%);
+    }
+}
+
+@media (max-width: 850px) {
+
+    .section-padding {
+        padding: 20px 0;
+    }
+    
+    h1 {
+        padding: 0;
+        margin-bottom: 60px;
+    }
+
+    h3 {
+        position: static;
+        height: 50px;
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    h4 {
+        padding: 0;
+    }
+
+    button,
+    .about a {
+        width: 100%;
+    }
+
+    /* About/Our practice edits */
+
+    .about .rel-container {
+        min-height: 50vh;
+    }
+
+    /* Gallery/projects edits */
+
+    .projects .rel-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+    }
+
+    .half-width, 
+    .third-width, 
+    .half-width + .third-width {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Contact form edits */
+
+    .inputs-grouped {
+        flex-direction: column;
+    }
+
+    .name-field,
+    .email-field {
+        width: 100%;
+        margin: 0;
+    }
+
+    /* Testimonials edits */
+
+    article {
+        margin-top: 20px;
+    }
+
+    article p {
+        font-size: 1.4rem;
+    }
+
+    /* Footer edits */
+
+    footer img {
+        margin-bottom: 20px;
+    }
+
+    footer section {
+        width: 100%;
+        border-bottom: 1px solid #9C9B98;
+        padding-bottom: 20px;
+    }
+
+    footer nav {
+        flex-direction: column;
+        margin-top: 20px;
+    }
+
+    footer nav .flex-column {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    footer nav ul li { 
+        margin-top: 0;
+        margin-bottom: 20px;
+        margin-left: 0;
+    }
+
+    footer nav ul li:nth-of-type(1) {
+        width: 100%;
+    }
+
+    aside {
+        margin-top: 20px;
+    }
+
+}
+
+@media (max-width: 705px) {
+
+    .wrapper {
+        width: 95%;
+    }
+
+    label[for="toggle"] {
+        display: block;
+
+    }
+
+    label[for="toggle"]:hover {
+        right: 2.5%;
+        color: black;
+    } 
+
+    /* Header/nav edits */
+
+    input[type="checkbox"]:checked + .slide-out,
+    .slide-out:focus-within {
+        display: block;
+        transform: translate(-2.5%, 70%);
+    }
+
+    .slide-out {
+        flex-direction: column;
+        position: fixed;
+        width: 100%;
+        transform: translate(100%, 70%);
+        background: #333333;
+        box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 20px 4px;
+        z-index: 20;
+        transition: 0.7s;  
+    }
+
+    .slide-out li {
+        font-size: 1.6rem;
+        transition: 0.3s;
+    }
+
+    .slide-out a {
+        color: #9C9B98
+    }
+
+    .slide-out li:hover, 
+    .slide-out li:focus {
+        background: #9C9B98;
+    }
+
+    .slide-out a:hover, 
+    .slide-out a:focus {
+        color: #F4F3F0;
+    }
+
+    /* About/our practice edits */
+
+    .about .rel-container {
+        min-height: 60vh;
+    }
+}
+
+@media (max-width: 540px) {
+
+    /* Testimonials edits */
+    
+    article p {
+        font-size: 1.2rem;
+    }
+    
+    article img {
+        width: 100px; 
+        height: 100px;
+    }
+
+    .testimonial-details div:nth-of-type(2) {
+        width: 100%;
+        padding: 10px 0;
+    }
+
+    .testimonial-details a {
+        text-align: right;
+    }
+}
